@@ -1,8 +1,9 @@
-﻿using System;
-
-namespace TowerDefense.Main
+﻿namespace TowerDefense.Main
 {
-    public class Player : PropertyChangedAwaredObject
+    using System;
+    using TowerDefense.Interfaces;
+
+    public class Player : PropertyChangedAwaredObject, IPlayer
     {
         private string name;
 
@@ -61,7 +62,7 @@ namespace TowerDefense.Main
         {
             this.Name = String.Empty;
             this.Score = 0;
-            this.Money = 200;
+            this.Money = 20000;
             this.Lives = 10;
         }
     }
